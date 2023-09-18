@@ -8,6 +8,6 @@ public class Input {
         System.out.print("숫자를 입력해주세요 : ");
         String number = Console.readLine();
         exception.checkException(number);
-        user.addInputNumber(number);
+        user.addUserNumber(number);
     }
 }
