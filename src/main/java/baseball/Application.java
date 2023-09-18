@@ -6,5 +6,6 @@ public class Application {
         output.printStartGame();
         Input input = new Input();
         input.enterGameNumber();
+        output.printEndGame();
     }
 }
