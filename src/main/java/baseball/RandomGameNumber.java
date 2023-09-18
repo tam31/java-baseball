@@ -7,13 +7,25 @@ import java.util.List;
 
 public class RandomGameNumber {
 
-    public void getRandomGameNumber(){
-        List<Integer> computerNumber = new ArrayList<>();
-        while (computerNumber.size() < 3) {
+    private List<Integer> computerNumber;
+
+    public List<Integer> getComputerNumber() {
+        return computerNumber;
+    }
+
+    public void addComputerNumber(List<Integer> computerNumber) {
+        this.computerNumber = computerNumber;
+    }
+
+
+    public RandomGameNumber(){
+        List<Integer> randomNumberList = new ArrayList<>();
+        while (randomNumberList.size() < 3) {
             int randomNumber = Randoms.pickNumberInRange(1, 9);
-            if (!computerNumber.contains(randomNumber)) {
-                computerNumber.add(randomNumber);
+            if (!randomNumberList.contains(randomNumber)) {
+                randomNumberList.add(randomNumber);
             }
         }
+        addComputerNumber(randomNumberList);
     }
 }
