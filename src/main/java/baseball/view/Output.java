@@ -22,4 +22,8 @@ public class Output {
     public void isZeroStrike(int ball) {
         System.out.println(ball+"볼");
     }
+
+    public void isZeroBall(int strike) {
+        System.out.println(strike+"스트라이크");
+    }
 }
