@@ -14,4 +14,8 @@ public class Output {
     public void ThreeStrike() {
         System.out.println("3스트라이크");
     }
+
+    public void isZeroStrikeAndBall() {
+        System.out.println("낫싱");
+    }
 }

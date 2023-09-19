@@ -77,4 +77,10 @@ public class GameController {
         }
         return false;
     }
+
+    private void getZeroStrikeAndBall(int strike, int ball) {
+        if(strike==0 && ball == 0){
+            output.isZeroStrikeAndBall();
+        }
+    }
 }
