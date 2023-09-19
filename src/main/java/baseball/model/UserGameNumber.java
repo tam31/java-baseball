@@ -4,17 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserGameNumber {
-
-    private String inputNumber;
+    
     private List<Integer> userNumber;
-
-    public String getInputNumber() {
-        return inputNumber;
-    }
-
-    public void addInputNumber(String inputNumber) {
-        this.inputNumber = inputNumber;
-    }
 
     public List<Integer> getUserNumber() {
         return userNumber;
