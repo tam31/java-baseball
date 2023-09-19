@@ -4,7 +4,10 @@ import baseball.view.Output;
 
 public class GameController {
 
+    Output output = new Output();
     public void proceedGame() {
-        System.out.println("게임 시작");
+        output.printStartGame();
+
+        output.printEndGame();
     }
 }
