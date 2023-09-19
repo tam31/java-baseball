@@ -23,9 +23,9 @@ public class GameController {
         while(restart){
             computer.addComputerNumber(randomNumber.selectRandomNumber());
             getAnswerUserNumber(computer.getComputerNumber());
+            output.printEndGame();
             restart = getAnswerRestart();
         }
-        output.printEndGame();
     }
 
     private boolean getAnswerRestart() {
