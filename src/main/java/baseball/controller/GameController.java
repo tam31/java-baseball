@@ -36,6 +36,7 @@ public class GameController {
     private boolean isCompareTwoList(List<Integer> computerNumber, List<Integer> userNumber) {
         int strike = isStrikeCount(computerNumber, userNumber);
         int ball = isBallCount(computerNumber, userNumber);
+        return isCountStrikeAndBall(strike, ball);
     }
 
     private int isStrikeCount(List<Integer> computerNumber, List<Integer> userNumber){
@@ -59,4 +60,14 @@ public class GameController {
         }
         return ballCount;
     }
+
+    private boolean isCountStrikeAndBall(int strike, int ball){
+        if (isThreeStrike(strike)) return true;
+        getZeroStrikeAndBall(strike,ball);
+        getZeroStrike(strike,ball);
+        getZeroBall(strike,ball);
+        getStrikeAndBall(strike,ball);
+        return false;
+    }
+
 }
