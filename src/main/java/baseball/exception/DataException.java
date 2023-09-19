@@ -34,4 +34,10 @@ public class DataException {
             throw new IllegalArgumentException(number+"중 중복되는 값이 있습니다. 잘못된 값으로 프로그램을 종료합니다.");
         }
     }
+
+    public void isRestart(String answerUser) {
+        if(!(answerUser.equals("1") || answerUser.equals("2"))){
+            throw new IllegalArgumentException("잘못된 값으로 프로그램을 종료합니다.");
+        }
+    }
 }
