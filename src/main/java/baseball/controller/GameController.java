@@ -84,7 +84,7 @@ public class GameController {
     }
 
     private void getZeroStrike(int strike, int ball) {
-        if(strike==0){
+        if(strike==0 && ball !=0){
             output.isZeroStrike(ball);
         }
     }
