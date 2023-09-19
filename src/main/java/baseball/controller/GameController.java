@@ -30,7 +30,7 @@ public class GameController {
 
     private boolean getAnswerRestart() {
         input.isRestartGame();
-
+        return inputNumber.getUserAnswerRestart();
     }
 
     public void getAnswerUserNumber(List<Integer> computerNumber){

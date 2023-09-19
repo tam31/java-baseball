@@ -10,4 +10,13 @@ public class InputNumber {
         exception.checkException(inputUser);
         return inputUser;
     }
+
+    public boolean getUserAnswerRestart(){
+        String answerUser = Console.readLine();
+        exception.isRestart(answerUser);
+        if(answerUser.equals("1")){
+            return true;
+        }
+        return false;
+    }
 }
