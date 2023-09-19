@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserGameNumber {
-    
+
     private List<Integer> userNumber;
 
     public List<Integer> getUserNumber() {

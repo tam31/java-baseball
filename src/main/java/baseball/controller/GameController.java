@@ -1,5 +1,6 @@
 package baseball.controller;
 
+import baseball.model.UserGameNumber;
 import baseball.number.InputNumber;
 import baseball.number.RandomNumber;
 import baseball.model.RandomGameNumber;
@@ -11,13 +12,14 @@ public class GameController {
     Output output = new Output();
     Input input = new Input();
     RandomNumber randomNumber = new RandomNumber();
-    RandomGameNumber computer = new RandomGameNumber();
     InputNumber inputNumber = new InputNumber();
+    RandomGameNumber computer = new RandomGameNumber();
+    UserGameNumber user = new UserGameNumber();
     public void proceedGame() {
         output.printStartGame();
         computer.addComputerNumber(randomNumber.selectRandomNumber());
         input.enterGameNumber();
-        inputNumber.inputUserNumber();
+        user.addUserNumber(inputNumber.inputUserNumber());
         output.printEndGame();
     }
 }
