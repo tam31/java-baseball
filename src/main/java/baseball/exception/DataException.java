@@ -1,6 +1,6 @@
-package baseball;
+package baseball.exception;
 
-public class Exception {
+public class DataException {
 
     public void checkException(String number){
         checkNumber(number);

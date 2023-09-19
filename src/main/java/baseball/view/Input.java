@@ -1,15 +1,15 @@
 package baseball.view;
 
-import baseball.Exception;
+import baseball.exception.DataException;
 import baseball.model.UserGameNumber;
 import camp.nextstep.edu.missionutils.Console;
 public class Input {
     UserGameNumber userGameNumber = new UserGameNumber();
-    Exception exception = new Exception();
+    DataException dataException = new DataException();
     public void enterGameNumber(){
         System.out.print("숫자를 입력해주세요 : ");
         String number = Console.readLine();
-        exception.checkException(number);
+        dataException.checkException(number);
         userGameNumber.addUserNumber(number);
     }
 }
