@@ -37,5 +37,14 @@ public class GameController {
         int strike = isStrikeCount(computerNumber, userNumber);
         int ball = isBallCount(computerNumber, userNumber);
     }
-    
+
+    private int isStrikeCount(List<Integer> computerNumber, List<Integer> userNumber){
+        int strikeCount = 0;
+        for(int i=0; i<3; i++){
+            if(computerNumber.get(i)==userNumber.get(i)){
+                strikeCount +=1;
+            }
+        }
+        return strikeCount;
+    }
 }
