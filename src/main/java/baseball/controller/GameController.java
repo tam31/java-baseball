@@ -52,10 +52,9 @@ public class GameController {
     private int isBallCount(List<Integer> computerNumber, List<Integer> userNumber){
         int ballCount = 0;
         for(int i=0; i<3; i++){
-            for(int j=0; j<3; j++){
-                if(computerNumber.get(i) == userNumber.get(j)){
-                    ballCount +=1;
-                }
+            if(userNumber.get(i) != computerNumber.get(i) &&
+            userNumber.contains(computerNumber.get(i))){
+                ballCount +=1;
             }
         }
         return ballCount;
@@ -97,6 +96,8 @@ public class GameController {
     }
 
     private void getStrikeAndBall(int strike, int ball) {
-        output.isStrikeAndBall(strike, ball);
+        if(strike !=0 && ball !=0){
+            output.isStrikeAndBall(strike, ball);
+        }
     }
 }
