@@ -7,6 +7,8 @@ import baseball.model.RandomGameNumber;
 import baseball.view.Input;
 import baseball.view.Output;
 
+import java.util.List;
+
 public class GameController {
 
     Output output = new Output();
@@ -18,8 +20,16 @@ public class GameController {
     public void proceedGame() {
         output.printStartGame();
         computer.addComputerNumber(randomNumber.selectRandomNumber());
-        input.enterGameNumber();
-        user.addUserNumber(inputNumber.inputUserNumber());
+        getAnswerUserNumber(computer.getComputerNumber());
         output.printEndGame();
     }
+
+    public void getAnswerUserNumber(List<Integer> computerNumber){
+        boolean isDuplicateNumber = false;
+        while(!isDuplicateNumber){
+            input.enterGameNumber();
+            user.addUserNumber(inputNumber.inputUserNumber());
+        }
+    }
+    
 }
