@@ -1,5 +1,6 @@
-package baseball;
+package baseball.view;
 
+import baseball.Exception;
 import baseball.model.UserGameNumber;
 import camp.nextstep.edu.missionutils.Console;
 public class Input {

@@ -1,6 +1,8 @@
 package baseball;
 
 import baseball.model.RandomGameNumber;
+import baseball.view.Input;
+import baseball.view.Output;
 
 public class Application {
     public static void main(String[] args) {
