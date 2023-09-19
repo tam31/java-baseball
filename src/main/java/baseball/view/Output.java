@@ -18,4 +18,8 @@ public class Output {
     public void isZeroStrikeAndBall() {
         System.out.println("낫싱");
     }
+
+    public void isZeroStrike(int ball) {
+        System.out.println(ball+"볼");
+    }
 }
