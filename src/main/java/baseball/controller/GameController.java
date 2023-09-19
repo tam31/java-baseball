@@ -29,7 +29,13 @@ public class GameController {
         while(!isDuplicateNumber){
             input.enterGameNumber();
             user.addUserNumber(inputNumber.inputUserNumber());
+            isDuplicateNumber = isCompareTwoList(computerNumber, user.getUserNumber());
         }
+    }
+
+    private boolean isCompareTwoList(List<Integer> computerNumber, List<Integer> userNumber) {
+        int strike = isStrikeCount(computerNumber, userNumber);
+        int ball = isBallCount(computerNumber, userNumber);
     }
     
 }
