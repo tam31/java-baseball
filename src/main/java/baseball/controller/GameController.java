@@ -19,9 +19,18 @@ public class GameController {
     UserGameNumber user = new UserGameNumber();
     public void proceedGame() {
         output.printStartGame();
-        computer.addComputerNumber(randomNumber.selectRandomNumber());
-        getAnswerUserNumber(computer.getComputerNumber());
+        boolean restart = true;
+        while(restart){
+            computer.addComputerNumber(randomNumber.selectRandomNumber());
+            getAnswerUserNumber(computer.getComputerNumber());
+            restart = getAnswerRestart();
+        }
         output.printEndGame();
+    }
+
+    private boolean getAnswerRestart() {
+        input.isRestartGame();
+
     }
 
     public void getAnswerUserNumber(List<Integer> computerNumber){
