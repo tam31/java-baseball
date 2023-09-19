@@ -1,9 +1,9 @@
-package baseball;
+package baseball.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class User {
+public class UserGameNumber {
 
     private String inputNumber;
     private List<Integer> userNumber;
