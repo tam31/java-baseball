@@ -11,4 +11,7 @@ public class Output {
     }
 
 
+    public void ThreeStrike() {
+        System.out.println("3스트라이크");
+    }
 }

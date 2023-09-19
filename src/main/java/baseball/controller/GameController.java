@@ -70,4 +70,11 @@ public class GameController {
         return false;
     }
 
+    private boolean isThreeStrike(int strike) {
+        if(strike ==3){
+            output.ThreeStrike();
+            return true;
+        }
+        return false;
+    }
 }
