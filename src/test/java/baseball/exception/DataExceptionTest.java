@@ -15,6 +15,8 @@ class DataExceptionTest {
         //when 이걸 실행하면
         //then 결과가 예외가 발생함으로 성공
         Assertions.assertThrows(IllegalArgumentException.class,()-> exception.checkNumber(input));
+        Assertions.assertThrows(IllegalArgumentException.class,()-> exception.checkNumber("12a"));
+        Assertions.assertThrows(IllegalArgumentException.class,()-> exception.checkNumber("3a="));
     }
 
     @Test
