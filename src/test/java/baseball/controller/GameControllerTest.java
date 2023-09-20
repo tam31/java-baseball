@@ -46,4 +46,20 @@ class GameControllerTest {
 
     }
 
+
+    @Test
+    public void 스트라이크개수에따른결과검증() throws Exception{
+        //given 이런게 주어졋을때
+        boolean strike1 = gameController.isThreeStrike(1);
+        boolean strike2 = gameController.isThreeStrike(2);
+        boolean strike3 = gameController.isThreeStrike(3);
+        boolean strike4 = gameController.isThreeStrike(4);
+        //when 이걸 실행하면
+        //then 결과가 이렇게 된다
+        Assertions.assertEquals(false, strike1);
+        Assertions.assertEquals(false, strike2);
+        Assertions.assertEquals(true, strike3);
+        Assertions.assertEquals(false, strike4);
+
+    }
 }
