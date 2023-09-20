@@ -1,9 +1,9 @@
 package baseball.controller;
 
-import baseball.model.UserGameNumber;
+import baseball.model.UserNumberModel;
 import baseball.number.InputNumber;
 import baseball.number.RandomNumber;
-import baseball.model.RandomGameNumber;
+import baseball.model.RandomNumberModel;
 import baseball.view.InputView;
 import baseball.view.OutputView;
 
@@ -15,8 +15,8 @@ public class GameController {
     InputView inputView = new InputView();
     RandomNumber randomNumber = new RandomNumber();
     InputNumber inputNumber = new InputNumber();
-    RandomGameNumber computer = new RandomGameNumber();
-    UserGameNumber user = new UserGameNumber();
+    RandomNumberModel computer = new RandomNumberModel();
+    UserNumberModel user = new UserNumberModel();
     public void proceedGame() {
         outputView.printStartGame();
         boolean restart = true;

@@ -3,7 +3,7 @@ package baseball.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserGameNumber {
+public class UserNumberModel {
 
     private List<Integer> userNumber;
 
