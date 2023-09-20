@@ -26,6 +26,9 @@ class DataExceptionTest {
         //when 이걸 실행하면
         //then 크기가 3이 아니므로 예외발생
         assertThrows(IllegalArgumentException.class, ()-> exception.isSizeTree(input));
+        assertThrows(IllegalArgumentException.class, ()-> exception.isSizeTree("1"));
+        assertThrows(IllegalArgumentException.class, ()-> exception.isSizeTree("12"));
+        assertThrows(IllegalArgumentException.class, ()-> exception.isSizeTree(""));
     }
 
     @Test
