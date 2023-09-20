@@ -34,4 +34,13 @@ class DataExceptionTest {
         //then 결과가 중복이 발생함으로 예외처리
         assertThrows(IllegalArgumentException.class, ()-> exception.isNotDuplicate(input));
     }
+
+    @Test
+    public void 재시작_1_Or_2 () throws Exception{
+        //given 이런게 주어졋을때
+        String input = "3";
+        //when 이걸 실행하면
+        //then 결과가 1,2에 벗어남으로 예외발생
+        assertThrows(IllegalArgumentException.class, ()->exception.isRestart(input));
+    }
 }
