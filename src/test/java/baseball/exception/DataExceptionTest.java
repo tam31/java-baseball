@@ -1,19 +1,19 @@
 package baseball.exception;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class DataExceptionTest {
 
+    DataException exception = new DataException();
     @Test
-    public void test() throws Exception{
+    public void 문자_숫자_검증() throws Exception{
         //given 이런게 주어졋을때
-
+        String input = "aaa";
         //when 이걸 실행하면
-
-        //then 결과가 이렇게 된다
-
+        //then 결과가 예외가 발생함으로 성공
+        Assertions.assertThrows(IllegalArgumentException.class,()-> exception.checkNumber(input));
     }
-
 }
