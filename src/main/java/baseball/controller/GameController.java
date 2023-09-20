@@ -4,39 +4,39 @@ import baseball.model.UserGameNumber;
 import baseball.number.InputNumber;
 import baseball.number.RandomNumber;
 import baseball.model.RandomGameNumber;
-import baseball.view.Input;
-import baseball.view.Output;
+import baseball.view.InputView;
+import baseball.view.OutputView;
 
 import java.util.List;
 
 public class GameController {
 
-    Output output = new Output();
-    Input input = new Input();
+    OutputView outputView = new OutputView();
+    InputView inputView = new InputView();
     RandomNumber randomNumber = new RandomNumber();
     InputNumber inputNumber = new InputNumber();
     RandomGameNumber computer = new RandomGameNumber();
     UserGameNumber user = new UserGameNumber();
     public void proceedGame() {
-        output.printStartGame();
+        outputView.printStartGame();
         boolean restart = true;
         while(restart){
             computer.addComputerNumber(randomNumber.selectRandomNumber());
             getAnswerUserNumber(computer.getComputerNumber());
-            output.printEndGame();
+            outputView.printEndGame();
             restart = getAnswerRestart();
         }
     }
 
     private boolean getAnswerRestart() {
-        input.isRestartGame();
+        inputView.isRestartGame();
         return inputNumber.getUserAnswerRestart();
     }
 
     public void getAnswerUserNumber(List<Integer> computerNumber){
         boolean isDuplicateNumber = false;
         while(!isDuplicateNumber){
-            input.enterGameNumber();
+            inputView.enterGameNumber();
             user.addUserNumber(inputNumber.inputUserNumber());
             isDuplicateNumber = isCompareTwoList(computerNumber, user.getUserNumber());
         }
@@ -80,7 +80,7 @@ public class GameController {
 
     public boolean isThreeStrike(int strike) {
         if(strike ==3){
-            output.ThreeStrike();
+            outputView.ThreeStrike();
             return true;
         }
         return false;
@@ -88,25 +88,25 @@ public class GameController {
 
     public void getZeroStrikeAndBall(int strike, int ball) {
         if(strike==0 && ball == 0){
-            output.isZeroStrikeAndBall();
+            outputView.isZeroStrikeAndBall();
         }
     }
 
     public void getZeroStrike(int strike, int ball) {
         if(strike==0 && ball !=0){
-            output.isZeroStrike(ball);
+            outputView.isZeroStrike(ball);
         }
     }
 
     public void getZeroBall(int strike, int ball) {
         if(ball==0 && strike !=0){
-            output.isZeroBall(strike);
+            outputView.isZeroBall(strike);
         }
     }
 
     public void getStrikeAndBall(int strike, int ball) {
         if(strike !=0 && ball !=0){
-            output.isStrikeAndBall(strike, ball);
+            outputView.isStrikeAndBall(strike, ball);
         }
     }
 }
