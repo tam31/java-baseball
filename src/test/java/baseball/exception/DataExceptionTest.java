@@ -38,6 +38,7 @@ class DataExceptionTest {
         //when 이걸 실행하면
         //then 결과가 중복이 발생함으로 예외처리
         assertThrows(IllegalArgumentException.class, ()-> exception.isNotDuplicate(input));
+        assertThrows(IllegalArgumentException.class, ()-> exception.isNotDuplicate("112"));
     }
 
     @Test
