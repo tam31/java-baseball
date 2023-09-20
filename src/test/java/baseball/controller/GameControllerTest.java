@@ -28,4 +28,22 @@ class GameControllerTest {
         Assertions.assertEquals(0,strikeCount4);
     }
 
+    @Test
+    public void 볼개수() throws Exception{
+        //given 이런게 주어졋을때
+        List<Integer> computer = List.of(1,2,3);
+        List<Integer> user = List.of(1,3,4);
+        //when 이걸 실행하면
+        int ballCount = gameController.isBallCount(computer, user);
+        int ballCount2 = gameController.isBallCount(List.of(1,2,3), List.of(1,3,2));
+        int ballCount3 = gameController.isBallCount(List.of(1,2,3), List.of(3,1,2));
+        int ballCount4 = gameController.isBallCount(List.of(1,2,3), List.of(4,5,6));
+        //then 결과가 이렇게 된다
+        Assertions.assertEquals(1,ballCount);
+        Assertions.assertEquals(2,ballCount2);
+        Assertions.assertEquals(3,ballCount3);
+        Assertions.assertEquals(0,ballCount4);
+
+    }
+
 }
