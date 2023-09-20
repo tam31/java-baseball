@@ -48,7 +48,7 @@ public class GameController {
         return isCountStrikeAndBall(strike, ball);
     }
 
-    private int isStrikeCount(List<Integer> computerNumber, List<Integer> userNumber){
+    public int isStrikeCount(List<Integer> computerNumber, List<Integer> userNumber){
         int strikeCount = 0;
         for(int i=0; i<3; i++){
             if(computerNumber.get(i)==userNumber.get(i)){
@@ -58,7 +58,7 @@ public class GameController {
         return strikeCount;
     }
 
-    private int isBallCount(List<Integer> computerNumber, List<Integer> userNumber){
+    public int isBallCount(List<Integer> computerNumber, List<Integer> userNumber){
         int ballCount = 0;
         for(int i=0; i<3; i++){
             if(userNumber.get(i) != computerNumber.get(i) &&
@@ -69,7 +69,7 @@ public class GameController {
         return ballCount;
     }
 
-    private boolean isCountStrikeAndBall(int strike, int ball){
+    public boolean isCountStrikeAndBall(int strike, int ball){
         if (isThreeStrike(strike)) return true;
         getZeroStrikeAndBall(strike,ball);
         getZeroStrike(strike,ball);
@@ -78,7 +78,7 @@ public class GameController {
         return false;
     }
 
-    private boolean isThreeStrike(int strike) {
+    public boolean isThreeStrike(int strike) {
         if(strike ==3){
             output.ThreeStrike();
             return true;
@@ -86,25 +86,25 @@ public class GameController {
         return false;
     }
 
-    private void getZeroStrikeAndBall(int strike, int ball) {
+    public void getZeroStrikeAndBall(int strike, int ball) {
         if(strike==0 && ball == 0){
             output.isZeroStrikeAndBall();
         }
     }
 
-    private void getZeroStrike(int strike, int ball) {
+    public void getZeroStrike(int strike, int ball) {
         if(strike==0 && ball !=0){
             output.isZeroStrike(ball);
         }
     }
 
-    private void getZeroBall(int strike, int ball) {
+    public void getZeroBall(int strike, int ball) {
         if(ball==0 && strike !=0){
             output.isZeroBall(strike);
         }
     }
 
-    private void getStrikeAndBall(int strike, int ball) {
+    public void getStrikeAndBall(int strike, int ball) {
         if(strike !=0 && ball !=0){
             output.isStrikeAndBall(strike, ball);
         }
